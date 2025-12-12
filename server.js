@@ -17,7 +17,11 @@ const app = express()
 // mount routes
 
 app.get('/', function(req, res) {
-  res.send('<h1>hello, friend</h1>')
+  res.send('<h1>Hello Express</h1>')
+})
+
+app.get('/home', function(req, res) {
+  res.send('<h1>Home Page</h1>')
 })
 
 
@@ -26,3 +30,4 @@ app.get('/', function(req, res) {
 app.listen(3000, function() {
   console.log('Listening on port 3000')
 })
+
