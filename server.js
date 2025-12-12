@@ -2,6 +2,8 @@
 
 import express from 'express'
 
+import { todos } from './data/todo-data.js'
+
 // create Express app
 
 const app = express()
@@ -24,6 +26,11 @@ app.get('/home', function(req, res) {
   res.render('home')
 })
 
+app.get('/todos', function(req, res) {
+  res.render('todos/index', { 
+    todos: todos
+  })
+})
 
 // tell the app to listen on port 3000
 
